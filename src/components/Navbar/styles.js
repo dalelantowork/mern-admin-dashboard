@@ -111,9 +111,13 @@ export default makeStyles((theme) => ({
       position: "fixed",
       bottom: 0,
       textAlign: "center",
-      paddingBottom: 10,
-      marginLeft: 20,
+      paddingBottom: 0,
+      paddingTop: 0,
+      marginTop: 0,
+      width: "100%",
+      height: "40px",
     },
-    footer: {
-    }
+    gridContent: {
+      paddingBottom: "30px"
+    },
   }));

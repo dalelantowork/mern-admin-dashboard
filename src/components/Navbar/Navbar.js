@@ -18,6 +18,7 @@ import Box from '@material-ui/core/Box';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import CopyrightIcon from '@material-ui/icons/Copyright';
 
+import Footer from '../Footer/Footer';
 import Content from '../Content/Content';
 import HomePosts from '../HomePosts/HomePosts';
 import Dashboard from '../Dashboard/Dashboard';
@@ -26,7 +27,7 @@ import useStyles from './styles'
 import { useTheme } from '@material-ui/core/styles';
 import Badge from '@material-ui/core/Badge';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { Avatar,Button, Menu, MenuItem } from '@material-ui/core'
+import { Avatar,Button, Container, Grid, Menu, MenuItem } from '@material-ui/core'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import LocalAtmIcon from '@material-ui/icons/LocalAtm';
@@ -39,19 +40,6 @@ import { useDispatch} from 'react-redux';
 import decode from 'jwt-decode';
 import * as actionType from '../../constants/actionTypes';
 import MERNLogo from '../../images/MERNLogo.png';
-
-function Copyright() {
-    return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {'Copyright © '}
-        <Link color="inherit" to="#">
-          Dale Lanto
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {''}
-      </Typography>
-    );
-  }
 
 const Navbar = () => {
   /* user details */
@@ -141,7 +129,7 @@ const Navbar = () => {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.heading} component={Link} to="/" variant="h6" noWrap>
-            MERN Admin using Material-UI
+            Admin Management System
           </Typography>
           <IconButton color="inherit" className={classes.right}>
                 <Badge badgeContent={4} color="secondary">
@@ -213,16 +201,15 @@ const Navbar = () => {
               <ListItemIcon><ExitToAppIcon /></ListItemIcon>
               <ListItemText><Typography>Logout</Typography> </ListItemText>
             </ListItem>
-            <ListItem className={classes.footer}>
-              <ListItemIcon><CopyrightIcon /></ListItemIcon>
-              <ListItemText><Typography>Dale Lanto 2021</Typography></ListItemText>
-            </ListItem>
             {/* <div className={classes.bottomPush}>
                 <Copyright />
             </div> */}
             
         </List>
       </Drawer>
+      <Grid container>
+        <Grid item xs={12} sm={12} className={classes.gridContent}>
+      
       <main className={classes.content}>
         <div className={classes.toolbar} />
             <Typography paragraph>
@@ -230,6 +217,11 @@ const Navbar = () => {
             </Typography>
             {switchContent(content)}
       </main>
+      </Grid>
+      <Grid item xs={12} sm={12} className={classes.bottomPush}>
+            <Footer />
+      </Grid>
+      </Grid>
     </div>
   );
 }
