@@ -9,6 +9,10 @@ import UpdateIcon from '@material-ui/icons/Update';
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import GroupIcon from '@material-ui/icons/Group';
+import Charts from '../Charts/Charts';
+import DevCharts from '../Charts/DevCharts';
+import DevChartsVisits from '../Charts/DevChartsVisits';
+import DevChartsUsers from '../Charts/DevChartsUsers';
 
 const Dashboard = () => {
     const classes = useStyles();
@@ -103,6 +107,42 @@ const Dashboard = () => {
                             <Typography className={classes.cardCaption} variant="caption" color="textSecondary" > <DateRangeIcon className={classes.captionIcon}/>From Start to Date</Typography>
                         </Grid>  
                     </Grid>
+                </Card>
+            </Grid>
+        </Grid>
+        
+        {/* <Grid container spacing={3}>
+            <Grid item xs={12} sm={12} md={6}>
+                <Card className={classes.paperChart} elevation={4} >
+                    <Charts />
+                </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={3}>
+                <Card className={classes.paperChart} elevation={4} >
+                    <DevChartsVisits />
+                </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={3}>
+                <Card className={classes.paperChart} elevation={4} >
+                    <DevChartsVisits />
+                </Card>
+            </Grid>
+        </Grid> */}
+        <br/>
+        <Grid container spacing={3}>
+            <Grid item xs={12} sm={12} md={3}>
+                <Card className={classes.paperChart} elevation={4} >
+                    <DevChartsVisits />
+                </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6}>
+                <Card className={classes.paperChart} elevation={4} >
+                    <DevCharts />
+                </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={3}>
+                <Card className={classes.paperChart} elevation={4} >
+                    <DevChartsUsers />
                 </Card>
             </Grid>
         </Grid>

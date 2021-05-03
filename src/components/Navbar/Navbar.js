@@ -218,7 +218,7 @@ const Navbar = () => {
             {switchContent(content)}
       </main>
       </Grid>
-      <Grid item xs={12} sm={12} className={classes.bottomPush}>
+      <Grid item xs={12} sm={12} >
             <Footer />
       </Grid>
       </Grid>

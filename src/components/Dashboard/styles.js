@@ -60,5 +60,12 @@ export default makeStyles((theme) => ({
   },
   icon4: {
     backgroundColor: "#9c27b0",
-  }
+  },
+  paperChart: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+    height: "370px",
+    overflow: "visible",
+  },
 }));
