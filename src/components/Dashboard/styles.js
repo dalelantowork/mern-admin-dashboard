@@ -68,4 +68,14 @@ export default makeStyles((theme) => ({
     height: "370px",
     overflow: "visible",
   },
+  paperChartJS: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+    height: "250px",
+    overflow: "visible",
+  },
+  gridChartJS: {
+    marginTop: "45px"
+  },
 }));

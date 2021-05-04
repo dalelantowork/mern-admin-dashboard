@@ -9,10 +9,13 @@ import UpdateIcon from '@material-ui/icons/Update';
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import GroupIcon from '@material-ui/icons/Group';
-import Charts from '../Charts/Charts';
-import DevCharts from '../Charts/DevCharts';
-import DevChartsVisits from '../Charts/DevChartsVisits';
-import DevChartsUsers from '../Charts/DevChartsUsers';
+import Charts from '../DevCharts/Charts';
+import DevCharts from '../DevCharts/DevCharts';
+import DevChartsVisits from '../DevCharts/DevChartsVisits';
+import DevChartsUsers from '../DevCharts/DevChartsUsers';
+import ChartsVisits from '../ChartsJS2/ChartsVisits';
+import ChartsSales from '../ChartsJS2/ChartsSales';
+import ChartsRevenue from '../ChartsJS2/ChartsRevenue';
 
 const Dashboard = () => {
     const classes = useStyles();
@@ -111,42 +114,24 @@ const Dashboard = () => {
             </Grid>
         </Grid>
         
-        {/* <Grid container spacing={3}>
-            <Grid item xs={12} sm={12} md={6}>
-                <Card className={classes.paperChart} elevation={4} >
-                    <Charts />
+        <Grid container spacing={3} >
+            <Grid item xs={12} sm={12} md={4} className={classes.gridChartJS}>
+                <Card className={classes.paperChartJS} elevation={4} >
+                    <ChartsVisits />
                 </Card>
             </Grid>
-            <Grid item xs={12} sm={12} md={3}>
-                <Card className={classes.paperChart} elevation={4} >
-                    <DevChartsVisits />
+            <Grid item xs={12} sm={12} md={4} className={classes.gridChartJS}>
+                <Card className={classes.paperChartJS} elevation={4} >
+                    <ChartsSales />
                 </Card>
             </Grid>
-            <Grid item xs={12} sm={12} md={3}>
-                <Card className={classes.paperChart} elevation={4} >
-                    <DevChartsVisits />
-                </Card>
-            </Grid>
-        </Grid> */}
-        <br/>
-        <Grid container spacing={3}>
-            <Grid item xs={12} sm={12} md={3}>
-                <Card className={classes.paperChart} elevation={4} >
-                    <DevChartsVisits />
-                </Card>
-            </Grid>
-            <Grid item xs={12} sm={12} md={6}>
-                <Card className={classes.paperChart} elevation={4} >
-                    <DevCharts />
-                </Card>
-            </Grid>
-            <Grid item xs={12} sm={12} md={3}>
-                <Card className={classes.paperChart} elevation={4} >
-                    <DevChartsUsers />
+            <Grid item xs={12} sm={12} md={4} className={classes.gridChartJS}>
+                <Card className={classes.paperChartJS} elevation={4} >
+                    <ChartsRevenue />
                 </Card>
             </Grid>
         </Grid>
-        </div>
+        <br></br>
         <Typography paragraph>
             Lorem Ipsum for the DASHBOARD Fringilla est ullamcorper eget nulla
             facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
@@ -169,6 +154,26 @@ const Dashboard = () => {
             nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
             accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
         </Typography>
+
+        <Grid container spacing={3}>
+            <Grid item xs={12} sm={12} md={3}>
+                <Card className={classes.paperChart} elevation={4} >
+                    <DevChartsVisits />
+                </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6}>
+                <Card className={classes.paperChart} elevation={4} >
+                    <DevCharts />
+                </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={3}>
+                <Card className={classes.paperChart} elevation={4} >
+                    <DevChartsUsers />
+                </Card>
+            </Grid>
+        </Grid>
+        </div>
+        
         </>
     )
 }
