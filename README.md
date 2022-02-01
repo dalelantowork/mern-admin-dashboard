@@ -4,7 +4,7 @@ Context used for Authentication \
 React Redux used for API fetching and controls \
 React JS Front end hosted in netlify \
 Mongo Database used \
-Express JS and Node JS hosted in heroku \
+Express JS and Node JS hosted in heroku 
 
 - Sign up and login to view demo here : \
 https://dalelanto-admin-dashboard.netlify.app/
