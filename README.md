@@ -1,3 +1,14 @@
+# Admin Dashboard created using MERN (Mongo DB, Express JS, React JS and Node JS)
+Material UI used for design
+Context used for Authentication
+React Redux used for API fetching and controls
+React JS Front end hosted in netlify
+Mongo Database used
+Express JS and Node JS hosted in heroku
+
+- Sign up and login to view demo here :
+https://dalelanto-admin-dashboard.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
